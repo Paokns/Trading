@@ -160,7 +160,8 @@
         .feature-card {
             background-color: #222;
             padding: 20px;
-            max-width: 300px;
+            max-width: 350px;
+            width: 100%;  /* Ensure it fits properly in available space */
             border-radius: 15px;
             transition: transform 0.3s ease;
         }
@@ -172,6 +173,18 @@
         .feature-card img {
             width: 100%;
             border-radius: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-top: 15px;
+            color: white;
+        }
+
+        .feature-card p {
+            font-size: 18px;
+            color: white;
+            margin-top: 10px;
         }
 
         /* Motivational Section */
@@ -317,16 +330,83 @@
         <div class="quote">"Jangan takut rugi, takutlah jika tidak belajar dari kesalahan."</div>
         <div class="quote">"Trading bukan soal menang setiap saat, tapi soal bertahan dan berkembang."</div>
     </section>
-
-    <!-- Download Platform Section -->
-    <section id="platform" class="platform-section">
+<!-- Download Platform Section -->
+<section id="platform" class="platform-section">
+    <div class="container">
         <a href="https://play.google.com/store/apps/details?id=com.mobile.legends" target="_blank" class="platform-button">Download Platform</a>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Master Trading</p>
-    </footer>
+<!-- Footer (Copyright) -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Master Trading | All Rights Reserved</p>
+    </div>
+</footer>
 
-</body>
-</html>
+<!-- Styling for Layout and Responsiveness -->
+<style>
+    /* General Styling */
+    body {
+        background-color: #1a1a1a;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Platform Section */
+    .platform-section {
+        padding: 60px 5%;
+        text-align: center;
+    }
+
+    .platform-button {
+        background-color: #ff4757;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .platform-button:hover {
+        background-color: #e84118;
+        transform: scale(1.05);
+    }
+
+    /* Footer Section */
+    footer {
+        background-color: #121212;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .platform-button {
+            font-size: 18px;
+            padding: 12px 25px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    }
+</style>
