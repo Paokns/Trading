@@ -101,14 +101,16 @@
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 50px;  /* Adjusted for better visibility */
             font-weight: 600;
             margin-bottom: 15px;
+            color: white;
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 22px; /* Adjusted for better readability */
             margin-bottom: 20px;
+            color: white;
         }
 
         .cta-button {
@@ -136,12 +138,14 @@
             font-size: 34px;
             font-weight: 600;
             margin-bottom: 20px;
+            color: white;
         }
 
         section p {
             font-size: 18px;
             max-width: 800px;
             margin: 0 auto;
+            color: white;
         }
 
         /* Feature Cards */
@@ -172,19 +176,61 @@
 
         /* Motivational Section */
         .motivational {
-            background-color: #222;
+            background-color: #121212;
             padding: 60px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
-        .motivational p {
-            font-size: 20px;
-            margin: 15px 0;
+        .motivational .quote {
+            background-color: #1a1a1a;
+            color: white; /* Changed text color to white */
+            padding: 20px;
+            max-width: 350px;
+            border-radius: 10px;
+            font-size: 18px;
             font-style: italic;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .motivational .quote:hover {
+            background-color: #333;
+            transform: translateY(-5px);
+        }
+
+        /* Download Platform Section */
+        .platform-section {
+            background-color: #121212;
+            padding: 60px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .platform-button {
+            background-color: #ff4757;
+            padding: 15px 40px;
+            color: white;
+            font-size: 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .platform-button:hover {
+            background-color: #e84118;
+            transform: scale(1.05);
         }
 
         /* Footer */
         footer {
             background-color: #121212;
+            color: white; /* Changed text color to white */
             padding: 20px;
             margin-top: 40px;
         }
@@ -196,9 +242,21 @@
                 text-align: center;
             }
 
-            .feature-cards {
+            .feature-cards, .motivational, .platform-section {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .feature-card, .motivational .quote, .platform-button {
+                width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 36px;  /* Adjusted for smaller screens */
+            }
+
+            .hero p {
+                font-size: 18px;  /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -223,16 +281,17 @@
     <section class="hero">
         <video autoplay loop muted playsinline>
             <source src="https://github.com/Paokns/Trading-image/raw/refs/heads/main/Animasi%20trading.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
         </video>
         <h1>Belajar Trading dengan Mudah</h1>
-        <p>Pelajari teknik terbaik untuk memaksimalkan keuntungan Anda.</p>
+        <p>Pelajari teknik-teknik trading terbaik untuk memaksimalkan keuntungan Anda.</p>
         <a href="https://t.me/master_trading_group" class="cta-button" target="_blank">Join Now</a>
     </section>
 
     <!-- About -->
     <section id="about">
         <h2>Tentang Master Trading</h2>
-        <p>Kami memberikan edukasi trading terbaik untuk membantu Anda sukses di pasar keuangan.</p>
+        <p>Master Trading memberikan edukasi yang menawarkan berbagai informasi dan strategi untuk memulai dan sukses dalam dunia trading.</p>
     </section>
 
     <!-- Features -->
@@ -242,29 +301,26 @@
             <div class="feature-card">
                 <img src="https://github.com/Paokns/Trading-image/raw/main/Image%20trading%202.jpg" alt="Analisis Teknikal">
                 <h3>Analisis Teknikal</h3>
-                <p>Pelajari cara menganalisis grafik dan pola harga.</p>
+                <p>Pelajari cara melakukan analisis teknikal untuk membuat keputusan trading yang lebih cerdas.</p>
             </div>
             <div class="feature-card">
                 <img src="https://github.com/Paokns/Trading-image/raw/main/Image%20trading%201.jpg" alt="Analisis Fundamental">
                 <h3>Analisis Fundamental</h3>
-                <p>Pelajari bagaimana berita ekonomi mempengaruhi pasar.</p>
+                <p>Cari tahu cara menggunakan analisis fundamental untuk memahami kondisi pasar dan ekonomi.</p>
             </div>
         </div>
     </section>
 
-    <!-- Platform Section -->
-    <section id="platform">
-        <h2>Download Platform Trading</h2>
-        <p>Gunakan aplikasi trading terbaik untuk mendukung aktivitas trading Anda.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.mobile.legends" class="cta-button" target="_blank">Download Sekarang</a>
+    <!-- Motivational Section -->
+    <section class="motivational">
+        <div class="quote">"Kesabaran dan disiplin adalah kunci utama sukses dalam trading."</div>
+        <div class="quote">"Jangan takut rugi, takutlah jika tidak belajar dari kesalahan."</div>
+        <div class="quote">"Trading bukan soal menang setiap saat, tapi soal bertahan dan berkembang."</div>
     </section>
 
-    <!-- Motivational Quotes -->
-    <section class="motivational">
-        <h2>Kata-Kata Motivasi Trading</h2>
-        <p>"Kesuksesan dalam trading tidak datang dalam semalam, tapi dengan ketekunan dan strategi yang tepat."</p>
-        <p>"Trading bukan hanya tentang keuntungan, tetapi juga pembelajaran dari setiap kesalahan."</p>
-        <p>"Jangan biarkan emosi mengendalikan keputusanmu, kendalikan dirimu dan pasar akan mengikuti."</p>
+    <!-- Download Platform Section -->
+    <section id="platform" class="platform-section">
+        <a href="https://play.google.com/store/apps/details?id=com.mobile.legends" target="_blank" class="platform-button">Download Platform</a>
     </section>
 
     <!-- Footer -->
